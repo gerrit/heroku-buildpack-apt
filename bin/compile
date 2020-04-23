@@ -125,5 +125,5 @@ topic "Rewrite package-config files"
 find $BUILD_DIR/.apt -type f -ipath '*/pkgconfig/*.pc' | xargs --no-run-if-empty -n 1 sed -i -e 's!^prefix=\(.*\)$!prefix='"$BUILD_DIR"'/.apt\1!g'
 
 topic "traceroute symblink hack"
-ln -s "$BUILD_DIR/.apt/usr/bin/traceroute" "$BUILD_DIR/.apt/usr/bin/traceroute.db"
+ln -s "$BUILD_DIR/.apt/usr/bin/traceroute.db" "$BUILD_DIR/.apt/usr/bin/traceroute"
 
